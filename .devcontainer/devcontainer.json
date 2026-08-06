@@ -1,0 +1,30 @@
+{
+  "name": "Logic Apps Standard Dev",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:8.0-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
+    },
+    "ghcr.io/devcontainers/features/azure-cli:1": {},
+    "ghcr.io/devcontainers/features/powershell:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-azuretools.vscode-azurelogicapps",
+        "ms-azuretools.vscode-azurefunctions",
+        "ms-azuretools.vscode-azureresourcegroups",
+        "ms-dotnettools.csharp",
+        "ms-vscode.azure-account",
+        "ms-azure-devops.azure-pipelines",
+        "github.vscode-github-actions",
+        "redhat.vscode-yaml"
+      ]
+    }
+  },
+  "postCreateCommand": "npm install -g azure-functions-core-tools@4",
+  "remoteEnv": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true"
+  }
+}
