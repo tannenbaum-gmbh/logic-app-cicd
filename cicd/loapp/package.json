@@ -1,0 +1,16 @@
+{
+  "name": "loapp",
+  "version": "1.0.0",
+  "description": "Azure Logic Apps Standard workflow",
+  "main": "index.js",
+  "scripts": {
+    "build": "func extensions install",
+    "start": "func host start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {}
+}
