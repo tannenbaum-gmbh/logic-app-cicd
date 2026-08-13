@@ -1,0 +1,28 @@
+{
+  "name": "Logic Apps Standard Dev",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:8.0-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
+    },
+    "ghcr.io/devcontainers/features/azure-cli:1": {},
+    "ghcr.io/devcontainers/features/powershell:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-azuretools.vscode-azurelogicapps",
+        "ms-azuretools.vscode-azurefunctions",
+        "ms-azuretools.vscode-azureresourcegroups",
+        "ms-dotnettools.csharp",
+        "ms-vscode.azure-account",
+        "Azurite.azurite",
+        "ms-azure-devops.azure-pipelines",
+        "github.vscode-github-actions",
+        "redhat.vscode-yaml"
+      ]
+    }
+  },
+  "postCreateCommand": "bash -lc 'set -euo pipefail; if ! command -v func >/dev/null; then tmp_key=$(mktemp); curl -fsSL https://packages.microsoft.com/keys/microsoft.asc -o \"$tmp_key\"; key_fpr=$(gpg --show-keys --with-colons \"$tmp_key\" | awk -F: \"/^fpr:/ {print \\\$10; exit}\"); [ \"$key_fpr\" = \"BC528686B50D79E339D3721CEB3E94ADBE1229CF\" ]; gpg --dearmor < \"$tmp_key\" | sudo tee /usr/share/keyrings/microsoft-prod.gpg >/dev/null; rm -f \"$tmp_key\"; echo \"deb [signed-by=/usr/share/keyrings/microsoft-prod.gpg] https://packages.microsoft.com/debian/12/prod bookworm main\" | sudo tee /etc/apt/sources.list.d/microsoft-prod.list >/dev/null; sudo apt-get update; sudo apt-get install -y azure-functions-core-tools-4; fi; sudo npm install -g azurite'"
+}
