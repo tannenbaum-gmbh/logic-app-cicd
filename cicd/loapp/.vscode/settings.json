@@ -3,9 +3,5 @@
   "azureLogicAppsStandard.projectLanguage": "JavaScript",
   "azureLogicAppsStandard.projectRuntime": "~4",
   "debug.internalConsoleOptions": "neverOpen",
-  "azureFunctions.suppressProject": true,
-  "azureLogicAppsStandard.autoRuntimeDependenciesPath": "/home/vscode/.azurelogicapps/dependencies",
-  "azureLogicAppsStandard.funcCoreToolsBinaryPath": "/usr/bin/func",
-  "azureLogicAppsStandard.dotnetBinaryPath": "/usr/bin/dotnet",
-  "azureLogicAppsStandard.nodeJsBinaryPath": "/usr/bin/node"
+  "azureFunctions.suppressProject": true
 }
